@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulando el DOM en JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 id="title">ManipulaDOM</h1>
+    <div class="main-div">
+      Img de ejemplo: <br>
+      <img src="javascript.svg">
+    </div>
+    <div class="old-div">
+      Este div se eliminará
+    </div>
+
+    <input type="text" id="filterInput" placeholder="Filtrar elementos">
+    <ul class="list">
+      <li>Phyton</li>
+      <li>Javascript</li>
+      <li>Java</li>
+      <li>PHP</li>
+    </ul>
+    
+    <button class="btnClick">Click</button>
+
+    <h1>Lista de elementos dinamicos</h1>
+    <div>
+      <input type="text" id="itemInput" placeholder="Añade un elemento a la lista">
+      <button id="addButton">Anadir</button> 
+      <ul class="listaDinamica"></ul>
+    </div>
+    
+    <div id="draggable" draggable="true">Arrastrame</div>
+    <div id="dropzone">Zona para soltar</div>
+
+
+
+
+
+
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
