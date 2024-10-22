@@ -58,3 +58,47 @@ ul {
   padding: 10px;
   cursor: move;
 }
+
+.fondo_amarillo{
+  background-color: yellow;
+  padding: 10px;
+}
+
+.fondo_naranja{
+  background-color: orange;
+  padding: 10px;
+}
+
+.lista_comida{
+  width: 30%;
+  font-size: 18px;
+  
+ 
+}
+
+.txt_negrita{
+  font-weight: bold;
+}
+
+.txt_azul{
+  color: rgb(3, 3, 226);
+
+}
+
+.lista_div{
+  display: flex;
+  justify-content: center;
+}
+
+.title_lista{
+  margin-left: 40px;
+  width: 100%;
+}
+
+.respuesta{
+  margin-left: 40px;
+  margin-top: 50px;
+  color: rgb(106, 13, 192);
+  font-size: 40px;
+
+}

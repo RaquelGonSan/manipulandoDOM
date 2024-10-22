@@ -82,3 +82,49 @@ dropzone.addEventListener('drop', function(){
   draggable.style.display = 'block';
   this.append(draggable);
 })
+
+const orange_class = document.getElementsByClassName('fondo_naranja');
+//console.log(orange_class);
+orange_class[1].classList.add('txt_negrita');
+
+const yellow_class = document.querySelectorAll('.fondo_amarillo');
+//console.log(yellow_class);
+yellow_class.forEach(element => {
+  element.classList.add('txt_azul');
+});
+
+const lista_comida = document.getElementsByClassName('comida');
+console.log(lista_comida[2]);
+//console.log(lista_comida.parentNode)
+//console.log(lista_comida.parentElement)
+
+
+
+const lista_comidas = document.getElementsByClassName('comida');
+console.log(lista_comidas);
+for (comida of lista_comidas) {
+  console.log(comida);
+  comida.addEventListener('click', hago_click);
+}
+
+
+function hago_click(event){
+  let elemento = event.target.innerHTML;
+  let respuesta = document.querySelector('.respuesta');
+  respuesta.innerHTML = elemento;
+ }
+
+// a traves de funcion flecha
+//funcion flecha
+for (comida of lista_comidas) {
+   console.log(comida);
+   comida.addEventListener('click', (event) => {
+    let elemento = event.target.innerHTML;
+    let respuesta = document.querySelector('.respuesta');
+    respuesta.innerHTML = elemento;
+  });
+}
+
+element.remove
+
+ 
