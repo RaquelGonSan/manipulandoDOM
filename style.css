@@ -14,6 +14,10 @@ img {
   margin-top: 10px;
 }
 
+.img-fluid{
+  width: 40px;
+}
+
 .old-div {
   margin-top: 20px;
   background-color: #e0e0e0;
@@ -101,4 +105,28 @@ ul {
   color: rgb(106, 13, 192);
   font-size: 40px;
 
+}
+
+.block_colores{
+  background-color: rgb(23,41,56);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+ 
+}
+
+
+.container_color{
+  width: 35vw;
+  display: grid;
+  background-color: white;
+  border-radius: 50px;
+  max-width: 600px;
+  min-height: 150px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
 }

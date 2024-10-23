@@ -9,8 +9,13 @@ title.innerText = "Nuevo";
 title.innerHTML = "<em>Manipulando el DOM</em>";
 
 let imagen = document.querySelector('img');
-imagen.setAttribute('src', 'logo_bird.svg');
-imagen.classList.add('img-fluid');
+setTimeout(()=>{
+  imagen.setAttribute('src', 'html-5.png');
+  imagen.classList.add('img-fluid');
+}, 2000)
+
+//imagen.setAttribute('src', 'logo_bird.svg');
+//imagen.classList.add('img-fluid');
 mainDiv.style.backgroundColor = '#008A80';
 
 let old = document.querySelector('.old-div');
@@ -103,7 +108,7 @@ console.log(lista_comida[2]);
 const lista_comidas = document.getElementsByClassName('comida');
 console.log(lista_comidas);
 for (comida of lista_comidas) {
-  console.log(comida);
+  //console.log(comida);
   comida.addEventListener('click', hago_click);
 }
 
@@ -116,15 +121,58 @@ function hago_click(event){
 
 // a traves de funcion flecha
 //funcion flecha
-for (comida of lista_comidas) {
-   console.log(comida);
-   comida.addEventListener('click', (event) => {
-    let elemento = event.target.innerHTML;
-    let respuesta = document.querySelector('.respuesta');
-    respuesta.innerHTML = elemento;
-  });
+// for (comida of lista_comidas) {
+//    console.log(comida);
+//    comida.addEventListener('click', (event) => {
+//     let elemento = event.target.innerHTML;
+//     let respuesta = document.querySelector('.respuesta');
+//     respuesta.innerHTML = elemento;
+//   });
+// }
+
+const numColor = document.querySelectorAll('.color > p');
+numColor.forEach(element => {
+  element.setAttribute('style', 'font-weight: bold;');
+})
+
+const block_colores = document.querySelector('.block_colores');
+
+const inputRojo = document.getElementById('rojo');
+const inputVerde = document.getElementById('verde');
+const inputAzul = document.getElementById('azul');
+
+const txt_rojo = document.getElementById('txt_rojo');
+const txt_verde = document.getElementById('txt_verde');
+const txt_azul = document.getElementById('txt_azul');
+ 
+let rojo = inputRojo.value;
+let verde = inputVerde.value;
+let azul = inputAzul.value;
+
+txt_rojo.innerText = rojo;
+txt_verde.innerText = verde;
+txt_azul.innerText = azul;
+
+function actualizarColor(rojo,verde,azul){
+  const rgb = `rgb(${rojo},${verde},${azul})`;
+  block_colores.style.backgroundColor = rgb;
 }
 
-element.remove
 
- 
+inputRojo.addEventListener('change', (event) => {
+  rojo = event.target.value;
+  txt_rojo.innerText = rojo;
+  actualizarColor(rojo,verde,azul);
+})
+
+inputVerde.addEventListener('change', (event) => {
+  verde = event.target.value;
+  txt_verde.innerText = verde;
+  actualizarColor(rojo,verde,azul);
+})
+
+inputAzul.addEventListener('change', (event) => {
+  azul = event.target.value;
+  txt_azul.innerText = azul;
+  actualizarColor(rojo,verde,azul);
+})
