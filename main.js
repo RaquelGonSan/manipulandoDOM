@@ -176,3 +176,22 @@ inputAzul.addEventListener('change', (event) => {
   txt_azul.innerText = azul;
   actualizarColor(rojo,verde,azul);
 })
+
+function leer_json(){
+  let datosJson;
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', 'persona.json', true);
+  xhr.responseType = 'json';
+  xhr.onload = function(){
+  if(this.status == 200){
+    console.log('entro');
+    datosJson = this.response;
+    let elementoJson = document.querySelector('.contenido_json');
+    elementoJson.textContent = JSON.stringify(datosJson);
+    elementoJson.textContent += `<br> ${datosJson.nombre}`;
+  } else{
+    console.log('Error en la peticion');
+  }
+  }
+  xhr.send();
+}

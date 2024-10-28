@@ -1,0 +1,14 @@
+{
+    "nombre": "Javier",
+    "apellido": "Garcia",
+    "edad": 23,
+    "direccion": {
+        "calle": "Calle Falsa",
+        "numero": 123,
+        "ciudad": "Ciudad Falsa"
+    },
+    "telefonos": [
+        "123456789",
+        "987654321"
+    ]
+}
