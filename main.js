@@ -195,3 +195,48 @@ function leer_json(){
   }
   xhr.send();
 }
+
+function leer_json2(){
+  fetch('persona.json')
+  .then(response => response.json())
+  .then(datosJson => {
+    let elementoJson = document.querySelector('.contenido_json');
+    elementoJson.textContent = JSON.stringify(datosJson);
+    elementoJson.textContent += `<br> ${datosJson.nombre}`;
+  })
+  .catch(error => {
+    console.log('Error en la peticion', error);
+  })
+}
+
+
+
+//let boton = document.querySelector('.boton');
+//boton.addEventListener('click', funcion_click)
+
+
+function funcion_click(){
+  console.log('click');
+}
+
+let boton = document.querySelector('.boton');
+
+boton.addEventListener('click', (event)=>{
+  alert(event.currentTarget);
+})
+
+
+let enlace = document.querySelector('.enlace_google');
+
+enlace.addEventListener('click', (event)=>{
+  event.preventDefault();
+  alert('deshabilitado')
+})
+
+
+let codigo = document.querySelector('.capturaInput');
+
+codigo.addEventListener('input', (event)=>{
+  let label = document.querySelector('.capturaLabel');
+  label.innerHTML = event.target.value;
+})
